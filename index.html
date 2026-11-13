@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderScape - Explore The World</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+  <style>
+   
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8fbff;
+    color:#333;
+}
+
+header{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#ffffff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.logo h2{
+    font-size:32px;
+    color:#008cff;
+}
+
+.logo span{
+    color:#ff9800;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin:0 18px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+    color:#008cff;
+}
+
+.book-btn{
+    text-decoration:none;
+    background:#008cff;
+    color:#fff;
+    padding:12px 28px;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.book-btn:hover{
+    background:#006edc;
+}
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:90px 8%;
+    gap:50px;
+}
+
+.hero-content{
+    flex:1;
+}
+
+.hero-content h1{
+    font-size:58px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:18px;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}
+
+.btn{
+    text-decoration:none;
+    background:#008cff;
+    color:white;
+    padding:14px 32px;
+    border-radius:35px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#006edc;
+}
+
+.btn2{
+    text-decoration:none;
+    border:2px solid #008cff;
+    color:#008cff;
+    padding:14px 32px;
+    border-radius:35px;
+    transition:.3s;
+}
+
+.btn2:hover{
+    background:#008cff;
+    color:#fff;
+}
+
+.hero-image{
+    flex:1;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:600px;
+    
+    border-radius: 50%;
+}
+
+.search-box{
+    width:85%;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    margin-bottom:80px;
+}
+
+.box{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.box label{
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.box input{
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+}
+
+.search-box button{
+    background:#008cff;
+    color:#fff;
+    border:none;
+    padding:15px 35px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.search-box button:hover{
+    background:#006edc;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:40px;
+    color:#008cff;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#666;
+    font-size:18px;
+}
+
+.destinations{
+    padding:80px 8%;
+    background:#f8fbff;
+}
+
+.destination-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+    
+}
+
+.card-content h3{
+    color:#008cff;
+    margin-bottom:10px;
+}
+
+.card-content p{
+    color:#666;
+    margin-bottom:18px;
+    line-height:1.6;
+}
+
+.package-container{
+    display: flex;
+    justify-content: center;  
+    align-items: stretch;
+    gap: 80px;                 
+    flex-wrap: wrap;           
+    margin-top: 50px;
+}
+
+.package-card{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.packages{
+    padding:80px 8%;
+    background:#c5dff8 ;
+}
+
+.package-info{
+    padding: 20px 30px;
+}
+
+.card-content a{
+    display:inline-block;
+    text-decoration:none;
+    background:#008cff;
+    color:#fff;
+    padding:10px 22px;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.card-content a:hover{
+    background:#006edc;
+}
+
+
+.why-us{
+    padding:80px 8%;
+    background:#f8fbff;
+}
+
+.why-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.why-card{
+    background:#ffffff;
+    text-align:center;
+    padding:35px 25px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.why-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.why-card i{
+    font-size:50px;
+    color:#008cff;
+    margin-bottom:20px;
+}
+
+.why-card h3{
+    font-size:24px;
+    margin-bottom:15px;
+    color:#333;
+}
+
+.why-card p{
+    color:#666;
+    line-height:1.7;
+}
+
+.gallery{
+    padding:80px 8%;
+    background:#ffffff;
+}
+
+.gallery-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery-item{
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.gallery-item img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.1);
+}
+
+.reviews{
+    padding:80px 8%;
+    background:#f8fbff;
+}
+
+.review-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.review-card{
+    background:#fff;
+    text-align:center;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:.4s;
+}
+
+.review-card:hover{
+    transform:translateY(-10px);
+}
+
+.review-card img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.review-card h3{
+    margin-bottom:10px;
+    color:#008cff;
+}
+
+.review-card p{
+    color:#666;
+    line-height:1.6;
+}
+
+.stars{
+    color:#FFD700;
+    font-size:20px;
+    margin-top:15px;
+}
+
+.contact{
+    width:90%;
+    margin:auto;
+    display:flex;
+    gap:40px;
+    align-items:center;
+}
+
+.map{
+    width:50%;
+    height:600px;
+}
+
+.map iframe{
+    width:100%;
+    height:80%;
+    margin-top: 60px;
+}
+
+.contact-form{
+    width:100%;
+    max-width:700px;
+    margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.contact-form textarea{
+    resize:none;
+}
+
+.contact-form button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    background:#008cff;
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-form button:hover{
+    background:#006edc;
+}
+
+.footer{
+    background:#141d2f;
+    color:white;
+    padding:60px 8%;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+.footer-box{
+    flex:1;
+    min-width:220px;
+}
+
+.footer-box h2,
+.footer-box h3{
+    margin-bottom:20px;
+}
+
+.footer-box span{
+    color:orange;
+}
+
+.footer-box p{
+    color:#ccc;
+    line-height:28px;
+}
+
+.footer-box a{
+    display:block;
+    color:#ccc;
+    text-decoration:none;
+    margin:12px 0;
+}
+
+.footer-box a:hover{
+    color:#00c8ff;
+}
+
+.social{
+    margin-top:20px;
+}
+
+.social a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:40px;
+    height:40px;
+    border:1px solid #00c8ff;
+    border-radius:50%;
+    color:#00c8ff;
+    margin-right:10px;
+}
+
+.social a:hover{
+    background:#00c8ff;
+    color:white;
+}
+
+.footer hr{
+    margin:40px 0 20px;
+    border:0;
+    height:1px;
+    background:#2d405f;
+}
+
+
+.footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.footer-bottom a{
+    color:#ccc;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.footer-bottom a:hover{
+    color:#00c8ff;
+}
+
+.footer-box a{
+    display:block;
+    color:#ccc;
+    text-decoration:none;
+    margin:12px 0;
+}
+
+.footer-box a i{
+    color:#00c8ff;
+    width:22px;
+    margin-right:8px;
+}
+
+.footer-box p i{
+    color:#00c8ff;
+    width:22px;
+    margin-right:8px;
+}
+
+.footer-box h3 i{
+    color:#00c8ff;
+    margin-right:10px;
+}
+
+.social{
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    border: 2px solid #00c8ff;
+    border-radius: 50%;
+    color: #00c8ff;
+    text-decoration: none;
+    
+}
+.social a i{
+    font-size:15px;
+    line-height:2;
+}
+
+.social a:hover{
+    background:#00c8ff;
+    color:#fff;
+}
+
+@media(max-width:992px){
+
+header{
+    flex-direction:column;
+    gap:20px;
+}
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+.search-box{
+    flex-direction:column;
+}
+
+}
+
+@media(max-width:768px){
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:34px;
+}
+
+.section-title h2{
+    font-size:30px;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero{
+    padding:60px 5%;
+}
+
+.hero h1{
+    font-size:28px;
+}
+
+.book-btn,
+.btn,
+.btn2{
+    padding:12px 22px;
+}
+
+}
+
+  </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <h2>Wander<span>Scape</span></h2>
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+        <a href="#" class="book-btn">Book Now</a>
+
+    </header>
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Explore The World With WanderScape</h1>
+
+            <p>
+
+                Discover breathtaking destinations, unforgettable adventures,
+                and premium travel experiences crafted specially for you.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#" class="btn">Explore Tours</a>
+
+                <a href="#" class="btn2">Watch Video</a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+ 
+<img src="https://t4.ftcdn.net/jpg/00/65/48/25/360_F_65482539_C0ZozE5gUjCafz7Xq98WB4dW6LAhqKfs.jpg" alt="Travel">
+        </div>
+
+    </section>
+
+    <section class="search-box">
+
+        <div class="box">
+            <label>Destination</label>
+            <input type="text" placeholder="Where to?">
+        </div>
+
+        <div class="box">
+            <label>Check In</label>
+            <input type="date">
+        </div>
+
+        <div class="box">
+            <label>Guests</label>
+            <input type="number" placeholder="2">
+        </div>
+
+        <button>Search</button>
+
+    </section>
+
+<section class="destinations" id="destinations">
+
+    <div class="section-title">
+        <h2>Popular Destinations</h2>
+        <p>Discover the most loved places around the world.</p>
+    </div>
+
+    <div class="destination-container">
+
+        <div class="card">
+            <img src="https://media.istockphoto.com/id/1498516775/photo/the-eiffel-tower-in-paris-france-at-sunset.jpg?s=612x612&w=0&k=20&c=V4StdESr6-QQWOjXm6R8b1T-_slWLxasMnN6SWdV9ko=" alt="Paris">
+            <div class="card-content">
+                <h3>Paris, France</h3>
+                <p>Experience the city of love with beautiful architecture and delicious cuisine.</p>
+                <a href="#">Explore More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://media.istockphoto.com/id/675172642/photo/pura-ulun-danu-bratan-temple-in-bali.jpg?s=612x612&w=0&k=20&c=_MPdmDviIyhldqhf7t6s63C-bZbTGfNHMlJP9SIa8Y0=" alt="Bali">
+            <div class="card-content">
+                <h3>Bali, Indonesia</h3>
+                <p>Relax on tropical beaches and enjoy breathtaking island views.</p>
+                <a href="#">Explore More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://media.istockphoto.com/id/1097789900/photo/aerial-view-of-dubai-palm-jumeirah-island-united-arab-emirates.jpg?s=612x612&w=0&k=20&c=a54NL3aG_WcbHLSyw6UvSyRDzZC3s-mT6slVN-ONJ0I=" alt="Dubai">
+            <div class="card-content">
+                <h3>Dubai, UAE</h3>
+                <p>Luxury shopping, skyscrapers, desert adventures and unforgettable experiences.</p>
+                <a href="#">Explore More</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="packages" id="packages">
+
+    <div class="section-title">
+        <h2>Best Tour Packages</h2>
+        <p>Choose the perfect holiday package for your next adventure.</p>
+    </div>
+
+    <div class="package-container">
+
+        <div class="package-card">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7Y1iomCtDxqJ4O52TcOsgkzBNlE5iebV4GAy9zwdX-sMZlcQuPHrfL40y&s=10" width="500px" height="300px" alt="Beach Tour">
+
+            <div class="package-info">
+
+                <h3>Beach Escape</h3>
+
+                <p>4 Days | Maldives</p>
+
+                <h4>₹29,999</h4>
+
+                <a href="#" class="package-btn">Book Now</a> 
+
+            </div> <br><br>
+
+        </div>
+
+        <div class="package-card">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjh_IcfZeVnU98y26nlkSd0BGf8Ob0QZgXy5jkTWDqSiadppLJDV9KJMOO&s=10" width="500px" height="300px" alt="Mountain Tour">
+
+            <div class="package-info">
+
+                <h3>Mountain Adventure</h3>
+
+                <p>6 Days | Switzerland</p>
+
+                <h4>₹54,999</h4>
+
+                <a href="#" class="package-btn">Book Now</a>
+
+            </div> <br><br>
+
+        </div>
+
+        <div class="package-card">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU7xrHc_Q2Wbt2BiLnFIKBLawS7L7wkFODF5G1v8UqVoER-NAf_Zlw_Xw&s=10" width="500px" height="300px" alt="City Tour">
+
+            <div class="package-info">
+
+                <h3>City Explorer</h3>
+
+                <p>5 Days | Singapore</p>
+
+                <h4>₹39,999</h4>
+
+                <a href="#" class="package-btn">Book Now</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="why-us">
+
+    <div class="section-title">
+        <h2>Why Choose WanderScape?</h2>
+        <p>We make every journey memorable with quality service and exciting experiences.</p>
+    </div>
+
+    <div class="why-container">
+
+        <div class="why-card">
+            <i class="fa-solid fa-plane-departure"></i>
+            <h3>Worldwide Tours</h3>
+            <p>Explore the world's most beautiful destinations with carefully planned travel packages.</p>
+        </div>
+
+        <div class="why-card">
+            <i class="fa-solid fa-wallet"></i>
+            <h3>Affordable Prices</h3>
+            <p>Enjoy premium travel experiences at budget-friendly prices with no hidden charges.</p>
+        </div>
+
+        <div class="why-card">
+            <i class="fa-solid fa-headset"></i>
+            <h3>24/7 Support</h3>
+            <p>Our travel experts are always ready to help you before, during and after your trip.</p>
+        </div>
+
+        <div class="why-card">
+            <i class="fa-solid fa-shield-heart"></i>
+            <h3>Safe Journey</h3>
+            <p>Your safety is our highest priority with trusted partners and secure bookings.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="gallery" id="gallery">
+
+    <div class="section-title">
+        <h2>Travel Gallery</h2>
+        <p>Beautiful moments captured from our travelers around the world.</p>
+    </div>
+
+    <div class="gallery-container">
+
+        <div class="gallery-item">
+            <img src="https://www.revv.co.in/blogs/wp-content/uploads/2019/11/self-drive-car-rental-delhi-gurgaon-noida_revv-blog.jpg" alt="Gallery Image">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE-vpOv78zX0Zck1IiVUVC2dCnLlzZnQ3tYXy7_ZLU_A&s=10" alt="Gallery Image">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7FEgcfZ-YLWcHhxGaHkB3i3ImGoi0w7xoieKb0JyuLQ&s=10" alt="Gallery Image">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxKSnWec6f-LBhP7gdGXoViZRHYWEnWkNal3f3hDEXQA8F_r5LlTUqhYna&s=10" alt="Gallery Image">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ26G_IF33C3_tDGc7aV4orXG-mqFWefnytlMEULNtADPk81WEA9fC58xw&s=10" alt="Gallery Image">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://s7ap1.scene7.com/is/image/incredibleindia/ram-janmaboomi-ayodhya-uttar%20pradesh-1?qlt=82&ts=1726649833165" alt="Gallery Image">
+        </div>
+
+    </div>
+
+</section>
+
+<section class="reviews" id="reviews">
+
+    <div class="section-title">
+        <h2>What Our Travelers Say</h2>
+        <p>Thousands of happy travelers trust WanderScape.</p>
+    </div>
+
+    <div class="review-container">
+
+        <div class="review-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbWdZzvjXVdAhqer8HcDJ8bf2qIiI-l0my5hYfFs-RYg&s" alt="Customer">
+            <h3>Emma Johnson</h3>
+            <p>"The trip was perfectly organized. Every moment was unforgettable!"</p>
+            <div class="stars">
+                ★★★★★
+            </div>
+        </div>
+
+        <div class="review-card">
+            <img src="https://static.toiimg.com/thumb/msid-76819649,width-400,resizemode-4/76819649.jpg" alt="Customer">
+            <h3>Rahul Sharma</h3>
+            <p>"Amazing service, affordable packages and friendly guides."</p>
+            <div class="stars">
+                ★★★★★
+            </div>
+        </div>
+
+        <div class="review-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjxW1bWEOLRgriJWQ8qPLLwxinCdPgtZSOjWF9RQFt0d1v1666AFXgLDI&s=10" alt="Customer">
+            <h3>Sophia Lee</h3>
+            <p>"I would definitely book my next vacation with WanderScape."</p>
+            <div class="stars">
+                ★★★★★
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+ <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>Let's plan your next adventure together.</p>
+    </div>
+
+<section class="contact" id="contact">
+
+  <div class="map">
+
+        <!-- Google Map -->
+
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d130081.2750595437!2d76.6149797552723!3d30.698295389339254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fee906da6f81f%3A0x512998f16ce508d8!2sSahibzada%20Ajit%20Singh%20Nagar%2C%20Punjab!5e1!3m2!1sen!2sin!4v1784533274950!5m2!1sen!2sin"
+        width="20%"
+        height="500px"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+        </iframe>
+
+    </div>
+
+
+    <form class="contact-form">
+
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <input type="text" placeholder="Destination">
+
+        <textarea rows="6" placeholder="Your Message"></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>
+
+<footer class="footer">
+
+<div class="footer-container">
+
+    <!-- Logo -->
+    <div class="footer-box">
+        <h2>Wander<span>Scape</span></h2>
+
+        <p>
+            Explore. Dream. Discover.<br>
+            Plan your perfect journey with us.
+        </p>
+
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+
+    </div>
+
+    <!-- Links -->
+    <div class="footer-box">
+
+       <h3><i class="fa-solid fa-link"></i> Quick Links</h3>
+
+<a href="#"><i class="fa-solid fa-house"></i> Home</a>
+
+<a href="#"><i class="fa-solid fa-map-location-dot"></i> Destinations</a>
+
+<a href="#"><i class="fa-solid fa-suitcase"></i> Packages</a>
+
+<a href="#"><i class="fa-solid fa-image"></i> Gallery</a>
+
+<a href="#"><i class="fa-solid fa-envelope"></i> Contact</a>
+
+    </div>
+
+    <!-- Popular -->
+    <div class="footer-box">
+
+        <h3><i class="fa-solid fa-star"></i> Popular Tours</h3>
+
+<a href="#"><i class="fa-solid fa-location-dot"></i> Manali</a>
+
+<a href="#"><i class="fa-solid fa-location-dot"></i> Goa</a>
+
+<a href="#"><i class="fa-solid fa-location-dot"></i> Kashmir</a>
+
+<a href="#"><i class="fa-solid fa-location-dot"></i> Jaipur</a>
+
+<a href="#"><i class="fa-solid fa-location-dot"></i> Kerala</a>
+
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-box">
+
+        <h3><i class="fa-solid fa-phone"></i> Contact Us</h3>
+
+<p><i class="fa-solid fa-envelope"></i> travel@gmail.com</p>
+
+<p><i class="fa-solid fa-phone"></i> +91 9876543210</p>
+
+<p><i class="fa-solid fa-location-dot"></i> Delhi, India</p>
+    </div>
+
+</div>
+
+<hr>
+
+<div class="footer-bottom">
+
+<p>© 2026 WanderScape. All Rights Reserved.</p>
+
+<div>
+
+<a href="#">Privacy Policy</a>
+
+<a href="#">Terms</a>
+
+<a href="#">Cookies</a>
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
